@@ -1,0 +1,33 @@
+{
+    "name": "palmiot/sql-splitter",
+    "version": "1.0.0",
+    "type": "library",
+    "description": "Tool for split SQL databases from a file or a pipe.",
+    "keywords": ["php","sql", "split", "splitter", "pipe", "stream", "file"],
+    "homepage": "https://github.com/palmiot/sql-splitter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Palmero",
+            "homepage": "https://github.com/palmiot/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Palmiot\\SqlSplitter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Palmiot\\SqlSplitter\\Test\\": "test/"
+        }
+    },
+    "scripts": {
+		"post-install-cmd": [
+			"php -r \"chmod('./databases', 0777);\""
+        ]
+	}
+}
